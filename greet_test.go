@@ -26,6 +26,12 @@ func TestGreetingFor(t *testing.T) {
 				name: "Василиса",
 			},
 			want: "Привет, Василиса!",
+		}, {
+			name: "Приветствие с именем и отчеством",
+			args: args{
+				name: "Василиса Ивановна",
+			},
+			want: "Привет, Василиса Ивановна!",
 		},
 	}
 	for _, tt := range tests {

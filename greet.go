@@ -1,11 +1,15 @@
 package greet
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/axard/greeting/format"
+)
 
 func GreetingFor(name string) string {
 	if len(name) == 0 {
 		return "Привет!";
 	}
 
-	return fmt.Sprintf("Привет, %s!", name)
+	return fmt.Sprintf(format.GreetingFormat(), name)
 }
